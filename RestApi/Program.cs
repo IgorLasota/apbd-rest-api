@@ -13,6 +13,8 @@ public class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddControllers().AddXmlSerializerFormatters();
         
+        builder.Services.AddScoped<IAnimalService, AnimalService>(); 
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
